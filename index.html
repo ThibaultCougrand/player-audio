@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/19aa09b342.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section>
+        <nav>
+            <button onclick="closeDiv()">
+                <h2>lecture en cours</h2>
+                <i class="fas fa-play"></i>
+            </button>
+            <button onclick="openDiv(0)">
+                <h2>réglages de son</h2>
+                <i class="fas fa-volume-up"></i>
+            </button>
+            <button onclick="openDiv(1)">
+                <h2>mes playlists</h2>
+                <i class="fas fa-list-ol"></i>
+            </button>
+            <button onclick="openDiv(2)">
+                <h2>créer une playlist</h2>
+                <i class="fas fa-list"></i>
+            </button>
+        </nav>
+        <main>
+            <div class="contener-img" style="background-color: aqua;"></div>
+            <div class="contener-wave"style="background-color: blue;"></div>
+            <div class="contener-progress"style="background-color: red;"></div>
+            <div class="contener-control"style="background-color: green;"></div>
+            <!-- hiden panel -->
+            <div class="panel reglage-son"></div>
+            <div class="panel my-playlist"></div>
+            <div class="panel new-playlist"></div>
+        </main>
+        <aside>
+            <h3>Playlist en cours :</h3>
+        </aside>
+    </section>
+    <script src="./js/main.js"></script>
+</body>
+</html>

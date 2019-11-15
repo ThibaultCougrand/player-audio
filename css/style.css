@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*** GENERAL ***/
+section {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 12% 73% 15%;
+}
+h3 {
+    margin: 5px;
+    font-weight: normal;
+}
+.reglage-son, .my-playlist, .new-playlist {
+    z-index: 2;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    /* background-color: #313131; */
+    transition: .8s;
+}
+.open-div {
+    width: 88vw;
+}
+/*** NAV ***/
+nav {
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(25%);
+    z-index: 1;
+    background-color: #262626;
+}
+nav button {
+    border: 0;
+    background-color: #262626;
+    text-transform: uppercase;
+    position: relative;
+    cursor: pointer;
+}
+nav button:hover h2 {
+    opacity: 0;
+}
+nav button:hover i {
+    opacity: 1;
+}
+nav button h2 {
+    transition: .3s;
+}
+nav button i {
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+    opacity: 0;
+    font-size: 50px;
+    transition: .7s;
+}
+nav button:first-child {
+    color: #FF4DBE;
+}
+nav button:nth-child(2) {
+    color: #B1FF4B;
+}
+nav button:nth-child(3) {
+    color: #446FFB;
+}
+nav button:last-child {
+    color: #FF4747;
+}
+.focus-btn {
+    background-color: #313131;
+    transition: .3s;
+}
+/*** LECTURE ***/
+
+/* MAIN */
+main {
+    height: 100%;
+    position: relative;
+    display: grid;
+    grid-template-rows: 50% 25% 5% 20%;
+    background-color: #313131;
+}
+main::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -1%;
+    bottom: 0;
+    right: -1%;
+    z-index: 0;
+    background-image: url("../image/album-alt-j.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+}
+/* ASIDE */
+aside {
+    height: 100%;
+    z-index: 1;
+    background-color: #262626;
+    color: #FF4DBE;
+    text-align: center;
+}
+
+/*** REGLAGE SON ***/
+
+.reglage-son {
+    background-color: #B1FF4B;
+}
+
+/*** MY PLAYLIST ***/
+
+.my-playlist {
+    background-color: #446FFB;
+}
+
+/*** NEW PLAYLIST ***/
+
+.new-playlist {
+    background-color: #FF4747;
+}
