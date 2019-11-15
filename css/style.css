@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 /*** GENERAL ***/
 section {
     height: 100vh;
@@ -15,24 +16,24 @@ h3 {
     font-weight: normal;
 }
 .reglage-son, .my-playlist, .new-playlist {
-    z-index: 2;
     width: 0;
     height: 100%;
     top: 0;
-    left: 0;
+    left: 12vw;
     position: absolute;
     /* background-color: #313131; */
-    transition: .8s;
+    transition: .6s;
 }
 .open-div {
     width: 88vw;
+    z-index: 1;
 }
+
 /*** NAV ***/
 nav {
     height: 100%;
     display: grid;
     grid-template-rows: repeat(25%);
-    z-index: 1;
     background-color: #262626;
 }
 nav button {
@@ -75,6 +76,7 @@ nav button:last-child {
     background-color: #313131;
     transition: .3s;
 }
+
 /*** LECTURE ***/
 
 /* MAIN */
@@ -83,26 +85,91 @@ main {
     position: relative;
     display: grid;
     grid-template-rows: 50% 25% 5% 20%;
+    z-index: -1;
     background-color: #313131;
 }
 main::after {
     content: "";
     position: absolute;
     top: 0;
-    left: -1%;
+    left: 0;
     bottom: 0;
-    right: -1%;
-    z-index: 0;
+    right: 0;
+    z-index: -1;
     background-image: url("../image/album-alt-j.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     opacity: 0.2;
 }
+
+/* IMAGE RONDE */
+.container-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-img img {
+    height: 90%;
+    width: auto;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+
+/* WAVE */
+.container-wave {
+    display: flex;
+    justify-content: center;
+}
+.wave {
+    height: 90%;
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+}
+.one-wave {
+    width: 1.2%;
+    height: 100%;
+    background-color: #FF4DBE;
+}
+
+/* PROGRESS BAR */
+.container-progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progress-bar {
+    height: 10%;
+    width: 90%;
+    position: relative;
+    background-color: #8A8A8A;
+}
+.progress-bar::before {
+    content: "";
+    height: 150%;
+    width: 50%;
+    top: -25%;
+    position: absolute;
+    background-color: #FF4DBE;
+}
+.progress-bar::after {
+    content: "";
+    height: 20px;
+    width: 20px;
+    top: calc(50% - 20px / 2);
+    left: calc(50% - 20px / 2);
+    position: absolute;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+/* CONTROLS */
+
+
 /* ASIDE */
 aside {
     height: 100%;
-    z-index: 1;
     background-color: #262626;
     color: #FF4DBE;
     text-align: center;

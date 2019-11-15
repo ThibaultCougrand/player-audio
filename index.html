@@ -12,6 +12,8 @@
 
 <body>
     <section>
+
+        <!-- menu de navigation -->
         <nav>
             <button onclick="closeDiv()">
                 <h2>lecture en cours</h2>
@@ -30,20 +32,78 @@
                 <i class="fas fa-list"></i>
             </button>
         </nav>
+
+        <!-- player audio -->
         <main>
-            <div class="contener-img" style="background-color: aqua;"></div>
-            <div class="contener-wave"style="background-color: blue;"></div>
-            <div class="contener-progress"style="background-color: red;"></div>
-            <div class="contener-control"style="background-color: green;"></div>
-            <!-- hiden panel -->
-            <div class="panel reglage-son"></div>
-            <div class="panel my-playlist"></div>
-            <div class="panel new-playlist"></div>
+            <div class="container-img">
+                <img src="./image/album-alt-j.jpg" alt="photo de la musique">
+            </div>
+            <div class="container-wave">
+                <div class="wave">
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                    <div class="one-wave"></div>
+                </div>
+            </div>
+            <div class="container-progress">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="container-control" style="background-color: green;"></div>
         </main>
+        
+        <!-- hiden panel -->
+        <div class="panel reglage-son"></div>
+        <div class="panel my-playlist"></div>
+        <div class="panel new-playlist"></div>
+
+        <!-- playlist en cours de lecture -->
         <aside>
             <h3>Playlist en cours :</h3>
         </aside>
     </section>
     <script src="./js/main.js"></script>
 </body>
+
 </html>
