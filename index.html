@@ -15,7 +15,7 @@
 
         <!-- menu de navigation -->
         <nav>
-            <button onclick="closeDiv()">
+            <button onclick="closeDiv()" class="focus-btn">
                 <h2>lecture en cours</h2>
                 <i class="fas fa-play"></i>
             </button>
@@ -35,8 +35,9 @@
 
         <!-- player audio -->
         <main>
+            <div class="bg-img"></div>
             <div class="container-img">
-                <img src="./image/album-alt-j.jpg" alt="photo de la musique">
+                <img src="" alt="">
             </div>
             <div class="container-wave">
                 <div class="wave">
@@ -88,9 +89,19 @@
                 </div>
             </div>
             <div class="container-progress">
-                <div class="progress-bar"></div>
+                <input class="progress-bar" type="range" value="0"/>
             </div>
-            <div class="container-control" style="background-color: green;"></div>
+            <div class="container-control">
+                <i class="fas fa-random"></i>
+                <i class="fas fa-step-backward"></i>
+                <i class="fas fa-backward"></i>
+                <div class="play">
+                    <i class="fas fa-play"></i>
+                </div>
+                <i class="fas fa-forward"></i>
+                <i class="fas fa-step-forward"></i>
+                <i class="fas fa-sync-alt"></i>
+            </div>
         </main>
         
         <!-- hiden panel -->
@@ -101,8 +112,10 @@
         <!-- playlist en cours de lecture -->
         <aside>
             <h3>Playlist en cours :</h3>
+            <ul></ul>
         </aside>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.core.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 
